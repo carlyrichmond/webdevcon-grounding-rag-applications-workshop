@@ -4,7 +4,15 @@ So you want to build a AI and RAG apps? Brilliant, as this is exactly what this 
 
 There are a couple of things you'll need before we start:
 
-## 0: Assumed installations
+## 0: Fork the project
+
+Create your own fork of [this repo](https://github.com/carlyrichmond/webdevcon-grounding-rag-applications-workshop/fork) and then clone the project onto your local machine:
+
+```zsh
+git clone https://github.com/<MY_GITHUB_USER>/webdevcon-grounding-rag-applications-workshop.git
+```
+
+## 1: Assumed installations
 
 Please ensure you have the following tools installed:
 
@@ -18,6 +26,8 @@ node -v
 npm -v
 ```
 
+*Please ensure that you are running Node v20.13.1 or higher*
+
 3. [tsx](https://www.npmjs.com/package/tsx)
 
 If you don't have tsx installed please make sure you have a global install configured by running the below command:
@@ -28,7 +38,7 @@ npm install -g tsx
 
 If you receive an error, [download and install Node.js and npm using these instructions](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
 
-## 2: LLM availability via Ollama and OpenAI
+## 2: Ollama
 
 There are many open source and proprietary machine learning models out there that can be used when building RAG applications. To make local development easy, we shall be using [Ollama](https://ollama.com/) to run our models locally.
 
@@ -50,7 +60,15 @@ ollama run llama3.1
 >>> Why is the sky blue and not green?
 ```
 
-We shall also compare the output of these models effectiveness for tool calling against OpenAI GPT4 Turbo. For this, please create an account for OpenAI [via their site](https://platform.openai.com/docs/overview) and create an API key. Creating an account should give you some initial credits to play with.
+## 3: Other API Keys
+
+### 3.2 WeatherAPI
+
+Create an account and API key for the [Weather API](https://www.weatherapi.com/). Optionally, you can substitute your own weather data in the `weatherTool` steps in the Sorely travel agent tutorial.
+
+### 3.2 OpenAI
+
+We shall compare the output of several LLMs' effectiveness for tool calling against [OpenAI GPT-4o Turbo](https://platform.openai.com/docs/models/gpt-4o). For this, please create an account for OpenAI [via their site](https://platform.openai.com/docs/overview) and create an API key. Creating an account should give you some initial credits to play with.
 
 ## 3: direnv
 
@@ -73,38 +91,38 @@ If you are unable to use direnv, feel free to export the required environment va
 
 ```zsh
 # Unix/ Mac
-export 
+export ELASTIC_DEPLOYMENT=http://localhost:9200
 
 # Windows
-set 
+set ELASTIC_DEPLOYMENT=http://localhost:9200
 ```
 
-## 4. An Elastic cluster to store your documents and perform searches against [OPTIONAL] 
+## 4. Elasticsearch
 
-If you're attending the workshop at React Day Berlin, check out the cluster credentials .env file for your assigned group on the day. You will see configuration that looks a bit like this:
+To run a local Elasticsearch and Kibana deployment, please use the [start-local script](https://www.elastic.co/guide/en/elasticsearch/reference/current/run-elasticsearch-locally.html) to create a local install:
 
 ```zsh
-ELASTIC_DEPLOYMENT=https://my-random-elastic-deployment:123
+curl -fsSL https://elastic.co/start-local | sh
+```
+
+This script uses [Docker](https://www.docker.com/), which you will also need to ensure is [installed on your machine](https://docs.docker.com/desktop/).
+
+Once installed, the terminal will show you the Kibana credentials you can use to login to Kibana at `http://localhost:5601`:
+
+![Elasticsearch `start-local` output](../screenshots/elastic-start-local-output.png)
+
+Please also keep a note of your API key for the duration of the workshop, and ensure you paste it into your `.env` file in the `movie-rag` folder, leaving it looking something like this:
+
+```zsh
+ELASTIC_DEPLOYMENT=http://localhost:9200
 ELASTIC_API_KEY=ARandomKey!
 INDEX_NAME="movies"
 ```
 
-For those following along outside this time, or who want their own cluster, please follow either the [start-local steps](https://www.elastic.co/guide/en/elasticsearch/reference/current/run-elasticsearch-locally.html) or register for an Elastic Cloud free trial via the below steps:
+If you need to start or stop the deployment at any time, use the start and stop scripts as documented in the `start-local` [README](https://github.com/elastic/start-local?tab=readme-ov-file#-start-and-stop-the-services).
 
-1. Create a trial account at [https://cloud.elastic.co/](https://cloud.elastic.co/) using the *Start free trial* button.
-2. Add the basic settings for your new cluster:
-    * Name your deployment something interesting.
-    * Choose your preferred cloud provider (any is fine).
-    * Choose your region, ideally one close to your physical location.
-    * Keeping the *Hardware profile* as the default of *Storage optimized* is fine.
-    * Keep *Version* as the latest.
-3. Configure the advanced cluster settings:
-    * Set zone availability on the *Hot tier* of Elasticsearch to 1 (you don't need to worry about data loss for our toy project).
-    * Make sure you have autoscaling enabled on the *Machine Learning instances*.
-    * Keep the default settings for Kibana (the UI and data visualization layer).
-    * Remove the Integrations Server instances. These are used for application monitoring which is out of scope of today's workshop.
-4. Hit the *Create deployment* button.
-5. Take a note of your deployment credentials somewhere safe. Especially the password!
-6. Navigate to your deployment once ready with the *Continue* button.
+This install with a 30-day trial for licensed features if you would like to play with these in the time.
+
+If you do not have Docker installed on your machine, or encounter any issues with the `start-local` script, please either create an [Elastic Cloud trial](https://cloud.elastic.co/registration?tech=rtp&plcmt=nav&cta=eswt-24503-a) or speak to the workshop facilitator who can create a [Cloud deployment](https://www.elastic.co/cloud) for you.
 
 Happy workshopping!
