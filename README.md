@@ -39,3 +39,8 @@ nvm use 20.13.1
 3. [Ollama](https://ollama.com/)
 4. [AI by Vercel SDK, including the UI SDK](https://sdk.vercel.ai/)
 5. [React](https://react.dev/), specifically [Next.js](https://nextjs.org/)
+
+### Alternative Technologies
+
+1. [LlamaIndex TS](https://ts.llamaindex.ai/) is an alternative to Langchain and AI SDK that also has TypeScripts support.
+2. [Mastra](https://mastra.ai/) is a TypeScript AI framework similar to AI SDK.

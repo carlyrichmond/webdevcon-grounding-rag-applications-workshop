@@ -21,8 +21,3 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 3. [Ollama](https://ollama.com/)
 4. [AI by Vercel SDK, including the UI SDK](https://sdk.vercel.ai/)
 5. [Next.js](https://nextjs.org/)
-
-### Alternative Technologies
-
-1. [LlamaIndex TS](https://ts.llamaindex.ai/) is an alternative to Langchain and AI SDK that also has TypeScripts support.
-2. [Mastra](https://mastra.ai/) is a TypeScript AI framework similar to AI SDK.
