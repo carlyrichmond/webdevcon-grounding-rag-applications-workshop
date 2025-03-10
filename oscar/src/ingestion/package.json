@@ -1,5 +1,5 @@
 {
-  "name": "movie-rag-embeddings",
+  "name": "oscar-embeddings",
   "version": "1.0.0",
   "description": "Movie embedding generation and ingestion using Langchain, Ollama and Elasticsearch",
   "main": "generate_embeddings.ts",
