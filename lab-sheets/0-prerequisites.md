@@ -52,10 +52,11 @@ We need an embedding model to generate our vectors in part one. For this we shal
 ollama pull mxbai-embed-large
 ```
 
-Specifically on the LLM side, we shall make use of models Llama3.1 and smollm2.*Given the size of these models we recommend pulling them in advance of the workshop as you may encounter issues downloading them on conference WiFi!*
+Specifically on the LLM side, we shall make use of models [Llama3.1](https://ollama.com/library/llama3.1) and [smollm2](https://ollama.com/library/smollm2). *Given the size of these models we recommend pulling them in advance of the workshop as you may encounter issues downloading them on conference WiFi!*
 
 ```zsh
 ollama pull llama3.1
+ollama pull smollm2
 ollama list
 ```
 
