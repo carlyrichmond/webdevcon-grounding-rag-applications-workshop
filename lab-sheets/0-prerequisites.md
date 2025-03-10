@@ -111,7 +111,7 @@ Once installed, the terminal will show you the Kibana credentials you can use to
 
 ![Elasticsearch `start-local` output](../screenshots/elastic-start-local-output.png)
 
-Please also keep a note of your API key for the duration of the workshop, and ensure you paste it into your `.env` file in the `movie-rag` folder, leaving it looking something like this:
+Please also keep a note of your API key for the duration of the workshop, and ensure you paste it into your `.env` file in the `oscar` and `sorely` folders, leaving it looking something like this:
 
 ```zsh
 ELASTIC_DEPLOYMENT=http://localhost:9200

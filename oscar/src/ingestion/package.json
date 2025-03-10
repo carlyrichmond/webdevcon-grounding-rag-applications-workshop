@@ -1,0 +1,33 @@
+{
+  "name": "movie-rag-embeddings",
+  "version": "1.0.0",
+  "description": "Movie embedding generation and ingestion using Langchain, Ollama and Elasticsearch",
+  "main": "generate_embeddings.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlyrichmond/grounding-rag-applications-workshop.git"
+  },
+  "keywords": [
+    "rag",
+    "vector",
+    "search",
+    "elasticsearch",
+    "langchain",
+    "ollama"
+  ],
+  "author": "Carly Richmond",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/carlyrichmond/grounding-rag-applications-workshop/issues"
+  },
+  "homepage": "https://github.com/carlyrichmond/grounding-rag-applications-workshop#readme",
+  "dependencies": {
+    "@elastic/elasticsearch": "^8.16.2",
+    "@langchain/community": "^0.3.15",
+    "@langchain/core": "^0.3.18",
+    "@langchain/ollama": "^0.1.2"
+  }
+}
