@@ -46,7 +46,13 @@ There are many open source and proprietary machine learning models out there tha
 brew install ollama
 ```
 
-Specifically, we shall make use of models Llama3.1 and smollm2.*Given the size of these models we recommend pulling them in advance of the workshop as you may encounter issues downloading them on conference WiFi!*
+We need an embedding model to generate our vectors in part one. For this we shall use [`mxbai-embed-large`](https://ollama.com/library/mxbai-embed-large).
+
+```zsh
+ollama pull mxbai-embed-large
+```
+
+Specifically on the LLM side, we shall make use of models Llama3.1 and smollm2.*Given the size of these models we recommend pulling them in advance of the workshop as you may encounter issues downloading them on conference WiFi!*
 
 ```zsh
 ollama pull llama3.1
@@ -99,7 +105,7 @@ set ELASTIC_DEPLOYMENT=http://localhost:9200
 
 ## 4. Elasticsearch
 
-To run a local Elasticsearch and Kibana deployment, please use the [start-local script](https://www.elastic.co/guide/en/elasticsearch/reference/current/run-elasticsearch-locally.html) to create a local install:
+To run a local Elasticsearch and Kibana deployment, please use the [`start-local` script](https://www.elastic.co/guide/en/elasticsearch/reference/current/run-elasticsearch-locally.html) to create a local install:
 
 ```zsh
 curl -fsSL https://elastic.co/start-local | sh
