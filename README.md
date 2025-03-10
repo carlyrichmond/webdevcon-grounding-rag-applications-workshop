@@ -21,7 +21,14 @@ Prior to building the applications using the supplied [worksheets](./lab-sheets/
 Initialising the starting point RAG application is possible via the below commands:
 
 ```zsh
-cd movie-rag
+cd oscar
+npm install
+```
+
+For the AI agent application, please use the below commands:
+
+```zsh
+cd sorely
 npm install
 ```
 
