@@ -1,0 +1,4 @@
+OPENAI_API_KEY=ARandomOpenAIKey?
+WEATHER_API_KEY=MyWeatherKey!
+ELASTIC_DEPLOYMENT=http://localhost:9200
+ELASTIC_API_KEY=ARandomKey!
