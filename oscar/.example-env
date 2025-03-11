@@ -1,0 +1,3 @@
+ELASTIC_DEPLOYMENT=http://localhost:9200
+ELASTIC_API_KEY=ARandomKey!
+INDEX_NAME="movies"
