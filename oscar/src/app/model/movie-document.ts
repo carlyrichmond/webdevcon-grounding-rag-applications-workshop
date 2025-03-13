@@ -4,12 +4,12 @@ export interface MovieDocument {
   }
   
   export interface MovieMetadata {
-    isAdult: boolean;
+    adult: boolean;
     chunk: number;
     original_language: string;
     popularity: number;
     poster_path: string;
-    release_pate: string;
+    release_date: string;
     title: string;
     vote_average: number;
     vote_count: number;

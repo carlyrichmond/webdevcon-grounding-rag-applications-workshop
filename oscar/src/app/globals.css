@@ -259,12 +259,6 @@ code {
   width: 45rem;
 }
 
-.banner__buttons {
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
-}
-
 .banner__button {
   background-color: rgba(51, 51, 51, 0.5);
   border: none;
@@ -275,7 +269,6 @@ code {
   margin-right: 1rem;
   outline: none;
   padding: 0.5rem 2rem;
-  width: fit-content;
 }
 
 .banner__button:hover {

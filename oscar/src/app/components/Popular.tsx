@@ -14,6 +14,13 @@ export default function Chat() {
     }, [movies]);
 
     async function getPopularMovies() {
+        try {
+            const response = await fetch("/api/popular");
+            const movieCollection = await response.json();
+            setMovies(movieCollection.results);
+        } catch (e) {
+            console.error(e);
+        }
     }
 
     return (
