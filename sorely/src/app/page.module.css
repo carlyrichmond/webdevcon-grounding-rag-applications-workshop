@@ -56,10 +56,6 @@
   font-weight: 600;
 }
 
-#unavailable-message {
-  margin-top: 1rem;
-}
-
 .ctas {
   display: flex;
   gap: 16px;

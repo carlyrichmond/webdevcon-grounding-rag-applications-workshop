@@ -3,7 +3,7 @@ import { Flight, Location } from '../model/flight.model';
 
 const index: string = "upcoming-flight-data";
 const client: Client = new Client({
-  node: process.env.ELASTIC_DEPLOYMENT,
+  node: process.env.ELASTIC_ENDPOINT,
   auth: {
     apiKey: process.env.ELASTIC_API_KEY || "",
   },
@@ -35,9 +35,6 @@ async function createIndex() {
 }
 
 async function addFlightsToIndex() {
-  // Adding wait to pause ahead of document ingestion
-  await new Promise(r => setTimeout(r, 5000));
-
   // Generate random flight data and index the documents
   const locations: Location[] = [
     "London",

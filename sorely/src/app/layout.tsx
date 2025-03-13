@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sorely Travel",
+  title: "Travel Planner",
   description: "Travel Planner AI Agent Example",
 };
 
@@ -33,7 +33,7 @@ export default function RootLayout({
             {children}
           </main>
           <footer className="footer">
-          Made by me with 💜 and excessive amounts of 🍵
+          Made by Carly Richmond with 💜 and excessive amounts of 🍵
           </footer>
         </div>
       </body>
