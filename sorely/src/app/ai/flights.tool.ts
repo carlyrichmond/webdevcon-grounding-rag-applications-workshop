@@ -8,7 +8,7 @@ import { Flight } from '../model/flight.model';
 
 const index: string = "upcoming-flight-data";
 const client: Client = new Client({
-  node: process.env.ELASTIC_ENDPOINT,
+  node: process.env.ELASTIC_DEPLOYMENT,
   auth: {
     apiKey: process.env.ELASTIC_API_KEY || "",
   },
