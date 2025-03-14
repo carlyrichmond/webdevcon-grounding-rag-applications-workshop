@@ -1,4 +1,4 @@
-# [Webdevcon] Grounding AI Applications with React, JavaScript, Langchain and Elasticsearch Workshop
+# [Webdevcon] Grounding AI Applications with JavaScript, Langchain and Elasticsearch Workshop
 
 This repo contains the content and final solution for the "Grounding AI Applications with JavaScript, Langchain and Elasticsearch" workshop, given at Webdevcon.
 
