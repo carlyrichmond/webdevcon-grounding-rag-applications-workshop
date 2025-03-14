@@ -13,6 +13,7 @@
     "@elastic/elasticsearch": "^8.17.0",
     "ai": "^4.1.39",
     "next": "15.1.7",
+    "ollama-ai-provider": "^1.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "showdown": "^2.1.0",
